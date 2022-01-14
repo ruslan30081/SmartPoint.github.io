@@ -2776,15 +2776,34 @@ h=k[0],f,q;"auto"==g?g=t():v&&(g=t(parseInt(g)));var w;z&&b.useNativeClamp?(e.ov
             var timediff=parseInt($('.roller-title-number-'+slno).attr('data-delay'));
             var increment=parseInt($('.roller-title-number-'+slno).attr('data-increment'));
             var settime=parseInt($('.roller-title-number-'+slno).attr('data-settime'));
+            var adapt=parseInt($('.roller-title-number-'+slno).attr('data-adapt'));
+            var settimeMobile=parseInt($('.roller-title-number-'+slno).attr('data-settimeMobile'));
+
             var numdiff=max-min;
             var timeout=(timediff*1000)/numdiff;
-            //if(numinc<10){
-                //increment=Math.floor((timediff*1000)/10);
-            //}//alert(increment);
-            setTimeout(() => {
-            numberRoll(slno,min,max,increment,timeout);
+            if(adapt >= 0){
+            if (window.screen.width <= adapt) { //мобилка
+                setTimeout(() => {
+                    numberRoll(slno,min,max,increment,timeout);
+                    
+                    }, settimeMobile);
+            }
+            if (window.screen.width >= adapt) { // пк
+
+                setTimeout(() => {
+                    numberRoll(slno,min,max,increment,timeout);
+                    
+                    }, settime);
+            }
+        }
+        else{
+                setTimeout(() => {
+                    numberRoll(slno,min,max,increment,timeout);
+                    
+                    }, settime);
+        }
             
-            }, settime);
+
             
     }
     function numberRoll(slno,min,max,increment,timeout){//alert(slno+"="+min+"="+max+"="+increment+"="+timeout);

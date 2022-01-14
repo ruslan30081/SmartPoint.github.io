@@ -331,6 +331,28 @@ if (window.screen.width <= 991.98) {
 			// navigation: {
 			// 	nextEl: '.problem-solving__arrows .problem-solving__arrow'
 			// }
+			breakpoint:{
+				
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 0,
+						autoHeight: true,
+						centeredSlides: true,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 20,
+					},
+					1268: {
+						slidesPerView: 4,
+						spaceBetween: 30,
+					},
+				
+			}
 		});
 	}
 
@@ -1387,6 +1409,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
+
 const btnBurger = document.querySelector('.header__burger');
 const menuHeader = document.querySelector('.menu-header');
 const menuitem = document.querySelector('.menu-header__link_label');
@@ -1661,8 +1684,10 @@ nameVideoBtn.forEach((element,index) => {
 
 });
 
-
-
+if (window.screen.width <= 860) {
+let midRate = document.querySelector('.rate__item_mid');
+midRate.classList.add('_active');
+}
 var ua = window.navigator.userAgent;
 var msie = ua.indexOf("MSIE ");
 var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
