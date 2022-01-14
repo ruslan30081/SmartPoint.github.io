@@ -4305,9 +4305,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-transform: translate(0px, 100px);
           transform: translate(0px, 100px);
   opacity: 0;
-  -webkit-transition: all 0.5s ease 0.75s;
-  -o-transition: all 0.5s ease 0.75s;
-  transition: all 0.5s ease 0.75s;
+  -webkit-transition: all 0.5s ease 0.45s;
+  -o-transition: all 0.5s ease 0.45s;
+  transition: all 0.5s ease 0.45s;
 }
 
 .window-main-page__item:nth-child(2) {
@@ -4317,9 +4317,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-transform: translate(0px, 100px);
           transform: translate(0px, 100px);
   opacity: 0;
-  -webkit-transition: all 0.5s ease 0.5s;
-  -o-transition: all 0.5s ease 0.5s;
-  transition: all 0.5s ease 0.5s;
+  -webkit-transition: all 0.5s ease 0.2s;
+  -o-transition: all 0.5s ease 0.2s;
+  transition: all 0.5s ease 0.2s;
 }
 
 .window-main-page__item:nth-child(1) {
@@ -4329,9 +4329,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-transform: translate(0px, 100px);
           transform: translate(0px, 100px);
   opacity: 0;
-  -webkit-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  transition: all 0.5s ease 0.1s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .window-main-page__item._active {
@@ -4466,7 +4466,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin-bottom: 20px;
   font-size: 20px;
   white-space: nowrap;
-  cursor: pointer;
   color: #fff;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -7585,6 +7584,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     background-color: #253942;
     color: #fff;
     border-radius: 5px;
+  }
+
+  .window-main-page__item:hover {
+    -webkit-transform: translate(0px, -20px);
+        -ms-transform: translate(0px, -20px);
+            transform: translate(0px, -20px);
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
 
   .technology__card:hover .technology__seeCase {
