@@ -1411,6 +1411,7 @@ return /******/ (function(modules) { // webpackBootstrap
 ;
 
 const btnBurger = document.querySelector('.header__burger');
+const udolu = document.querySelector('.udolu');
 const menuHeader = document.querySelector('.menu-header');
 const menuitem = document.querySelector('.menu-header__link_label');
 const spoilerAuth = document.querySelector('.spoiler-auth');
@@ -1458,7 +1459,17 @@ menuLabel.addEventListener('click', () => {
 })
 
 btnBurger.addEventListener("click",()=>{
-	menuHeader.classList.toggle('_active');
+
+  if (udolu.classList.contains('_active')) {
+    menuHeader.classList.add('_active');
+    }else{
+      menuHeader.classList.remove('_active');
+  
+    }
+
+  
+
+  
 });
 
 if(window.screen.width > 992){
